@@ -1,0 +1,347 @@
+.details{
+	.o_photo_div{
+		position: relative;
+		.o_photo{
+			height: 200px;
+			width: 100%;
+		}
+	}
+	ion-navbar{
+		position: absolute;
+		top: 0px;
+	}
+	.top_details{
+		position: absolute;
+		bottom: 80%;
+		padding: 10px;
+		.o_logo_div{
+			float: left;
+			height: 10px;
+			width: 30%;
+			margin-right: 10px;
+
+			.o_logo{
+				height: 50px;
+				width: 50px;
+			}
+		}
+		.o_name{
+			float: left;
+			width: 69%;
+			margin-left: 60px;
+			h4{
+				font-size: 15px;
+				color: #fff;
+			}
+		}
+	}
+	.rating{
+		border: 0px;
+		background-color: green;
+		border-radius: 5px;
+		color: #fff;
+		position: absolute;
+		bottom: 80%;
+		left: 89%;
+		padding: 5px;
+		font-size: 12px;
+
+		
+	}
+	.apply{
+		border: 0px;
+		background-color: red;
+		color: #fff;
+		position: absolute;
+		bottom: 70%;
+		left: 82%;
+		padding: 10px;
+		font-size: 12px;
+	}
+	/*.get_details{
+		border: 0px;
+		background-color: green;
+		color: #fff;
+		position: absolute;
+		bottom: 78%;
+		left: 58%;
+		padding: 10px;
+		font-size: 12px;
+		width: auto;
+	}*/
+	.content{
+		background-color: #F6F8FA;
+
+		$num-of-tabs: 5;
+
+		@mixin tabs {
+			@for $i from 1 through $num-of-tabs {
+				&:nth-of-type(#{$i}) {
+					&.segment-activated {
+						~ .slide {
+							left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+						}
+					}
+				}
+			}
+		}
+		ion-segment {
+			display: block;
+			white-space: nowrap;
+			font-size: 0;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+				display: none;
+			}
+
+			ion-segment-button.segment-button {
+				display: inline-block!important;
+				min-width: 100px!important;
+				width: auto!important;
+			}
+		}
+
+		.about{
+			padding: 2px;
+			font-size: 12px;
+
+			.title{
+				padding: 0px;
+				margin: 0px;
+			}
+		}
+		.course{
+			padding: 2px;
+		}
+
+		.reviews{
+			padding: 10px;
+			font-size: 12px;
+
+			ion-card{
+				ion-card-content{
+					padding: 0px;
+
+					.rev{
+						width: 50%;
+						border-left: 1px solid silver;
+						border-bottom: 1px solid silver;
+						float: left;
+						.icon{
+							float: left;
+							height: 40px;
+							padding: 5px;
+						}
+						.right{
+							margin-left: 8px;
+							float: left;
+							height: 40px;
+
+							.ratei{
+								height: 18px;
+
+								.value{
+									color: orange;
+									font-size: 15px;
+								}
+								.tit{
+									height: 18px;
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+
+		.ratings{
+			padding: 10px;
+			font-size: 12px;
+
+			ion-card{
+				ion-card-content{
+					.rate{
+						float: left;
+						border: 0px solid;
+						border-radius: 2px;
+						background-color: green;
+						color: #fff;
+						padding: 5px 10px 5px 10px;
+					}
+					.rate_right{
+						float: left;
+						margin-left: 20px;
+						margin-top: 0px;
+
+					}
+				}
+			}
+
+			ion-card{
+				ion-card-content{
+					.review{
+						.name{
+							font-size: 14px;
+							color: Orange;
+							float: left;
+							width: 75%;
+						}
+						.score{
+							float: right;
+							border: 0px solid;
+							background-color: green;
+							color: #fff;
+							padding: 5px;
+							width: 25%;	
+						}
+						.data_review{
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+		.contact{
+			ion-card{
+				ion-card-content{
+					font-size: 12px;
+					.title{
+						padding: 0px;
+						margin: 0px;
+						font-size: 15px;
+					}
+					ion-list{
+						ion-item{
+							font-size: 12px;
+							padding: 0px;
+							margin: 0px;
+						}
+					}
+				}
+			}
+		}
+
+		.similar{
+			padding: 0px;
+			margin: 0px;
+
+			.similar_title{
+				padding: 5px;
+				font-size: 15px;
+			}
+			.similar_content{
+				ion-card{
+					padding: 0px;
+				}
+				ion-card-content{
+					padding: 0px;
+					height: 60px;
+				}
+
+				ion-card{
+					.img-top{
+						height: 150px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.courses{
+		.gall_title{
+			padding-left: 10px;
+
+		}
+		ion-card{
+			padding: 0px;
+		}
+		ion-card-content{
+			padding: 0px;
+		}
+	}
+	.all_reviews{
+		.gall_title{
+			padding-left: 10px;
+
+		}
+		ion-card{
+			padding: 0px;
+		}
+		ion-card-content{
+			padding: 0px;
+
+			ion-list{
+				padding: 0px;
+				ion-item{
+					.title{
+						color: green;
+					}
+					.msg{
+						color: gray;
+						font-size: 15px;
+					}
+
+					.r{
+						padding: 0px;
+						margin: 0px;
+						.rev{
+							width: 50%;
+							border: 1px solid silver;
+							float: left;
+							.icon{
+								float: left;
+								height: 40px;
+								padding: 5px;
+							}
+							.right{
+								margin-left: 8px;
+								float: left;
+								height: 40px;
+
+								.ratei{
+									height: 18px;
+
+									.value{
+										color: orange;
+										font-size: 15px;
+									}
+								}
+								.tit{
+									height: 18px;
+									font-size: 12px;
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.faculty{
+		.gall_title{
+			padding-left: 10px;
+
+		}
+		ion-card{
+			padding: 0px;
+		}
+		ion-card-content{
+			padding: 0px;
+		}
+	}
+	.gall_title{
+		padding-left: 10px;
+
+	}
+	.img{
+		width: 50%;
+		float: left;
+		height: 100px;
+		padding: 2px;
+	}
+}

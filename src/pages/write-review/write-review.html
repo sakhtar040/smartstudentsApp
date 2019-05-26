@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title>Write Review</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contact">
+  <div class="coun_form_head">
+    <div class="form_head" text-center>
+      <h3>Review Form.</h3>
+      <p>All Fields are Required</p>
+    </div>
+  </div>
+  <div class="coun_form">
+    <ion-list>
+    	<ion-input type="hidden" value="{{data.org_id}}" [(ngModel)]="reviewData.id"></ion-input>
+    	<ion-input type="hidden" value="{{data.org_type}}" [(ngModel)]="reviewData.type"></ion-input>
+      <ion-item>
+        <ion-input type="text" value="{{data.org_name}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" value="{{name}}" [(ngModel)]="reviewData.name" placeholder="Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" value="{{Email}}" [(ngModel)]="reviewData.email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" value="{{phone}}" [(ngModel)]="reviewData.phone" placeholder="Phone"></ion-input>
+      </ion-item>
+      <ion-item class="item">
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="reviewData.title"></ion-input>
+      </ion-item>
+      <ion-item class="item">
+        <ion-label floating>Feel free to add any other comments or suggestions</ion-label>
+        <ion-textarea lineHeight="22" [(ngModel)]="reviewData.msg"></ion-textarea>
+      </ion-item>
+      <ion-item class="item">
+      	<ion-label>Select Academics Value</ion-label>
+      	<ion-select [(ngModel)]="reviewData.aca">
+      		<ion-option *ngFor="let value of select_value" value="{{value}}">
+      			{{value}}
+      		</ion-option>
+      	</ion-select>
+      </ion-item>
+      <ion-item class="item">
+      	<ion-label>Select Faculty & Teaching Quality</ion-label>
+      	<ion-select [(ngModel)]="reviewData.fac">
+      		<ion-option *ngFor="let value of select_value" value="{{value}}">
+      			{{value}}
+      		</ion-option>
+      	</ion-select>
+      </ion-item>
+      <ion-item class="item">
+      	<ion-label>Select Infrastructure Value</ion-label>
+      	<ion-select [(ngModel)]="reviewData.inf">
+      		<ion-option *ngFor="let value of select_value" value="{{value}}">
+      			{{value}}
+      		</ion-option>
+      	</ion-select>
+      </ion-item>
+      <ion-item class="item">
+      	<ion-label>Select Overall Experience Value</ion-label>
+      	<ion-select [(ngModel)]="reviewData.exp">
+      		<ion-option *ngFor="let value of select_value" value="{{value}}">
+      			{{value}}
+      		</ion-option>
+      	</ion-select>
+      </ion-item>
+      <ion-item class="item">
+      	<ion-label>Select Accomodation & Food Value</ion-label>
+      	<ion-select [(ngModel)]="reviewData.acc">
+      		<ion-option *ngFor="let value of select_value" value="{{value}}">
+      			{{value}}
+      		</ion-option>
+      	</ion-select>
+      </ion-item>
+      <button ion-button block color="primary" (click)="review()">Submit</button>
+    </ion-list>
+  </div>
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="links">
+      <div class="link" text-center>
+        <a href="https://www.facebook.com/Smart-Students-153047311975490/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://twitter.com/Smart__Students">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://www.linkedin.com/company/smart-students">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-google"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <br><br>
+    <div class="details" text-center>
+      <div class="copy">
+        Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+      </div>
+      <br>
+      <div class="policy">
+        <a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+      </div>
+      <p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+    </div>
+  </div>
+</ion-content>

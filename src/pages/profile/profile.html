@@ -1,0 +1,45 @@
+<ion-content no-border class="details">
+	<div class="o_photo_div">
+		<img src='{{cover}}' class="o_photo">
+	</div>
+	<ion-navbar transparent>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="logout()">
+				<ion-icon name="log-out"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+	<div class="top_details">
+		<div class="o_logo_div">
+			<img src="{{photo}}" class="o_logo">
+		</div>
+		<div class="o_name">
+			<h4>{{name}}</h4>
+		</div>
+	</div>
+	<!--<div class="all" text-center style="padding: 10px; color: red;">
+		All Content of your will be shown after next update of this application.
+	</div>-->
+	<ion-card>
+	  <ion-card-header>
+	    About
+	  </ion-card-header>
+	  <ion-card-content>
+	  	Name: {{name}}<br>
+	  	DOB: {{dob}}<br>
+	  	Gender: {{gender}}<br>
+	  	Email-id: {{Email}}
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-card>
+	  <ion-card-header>
+	    Academics
+	  </ion-card-header>
+	  <ion-card-content>
+	  	Past: {{past}}<br>
+	  	Present: {{present}}<br>
+	  	Experience: {{exp}}
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

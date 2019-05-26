@@ -1,0 +1,94 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>Select Paper</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openModal()">
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+<ion-content class="paper">
+	<!--Top Section-->
+	<div style="background:url('../assets/imgs/banner.jpg');background-size:cover;" class="top" text-center>
+		<h3 class="head">
+			<span class="head_color">{{exam.ename}} - Level {{level}}</span>
+		</h3>
+	</div>
+
+	<div class="paper_main" text-center>
+		<h5 class="title">
+			Tests - Level {{level}}
+		</h5>
+		<div class="papers" *ngFor="let paper of paper_data">
+			<div class="icon">
+				<ion-icon name="paper"></ion-icon>
+			</div>
+			<div class="paper_name">
+				{{paper.pname}}
+			</div>
+			<div class="paper_details">
+				<div class="questions">
+					Questions: {{paper.num_ques}}
+				</div>
+				<div class="duration">
+					Duration: {{paper.duration}} minutes
+				</div>
+				<div class="credits">
+					Test Credit: {{paper.test_credit}}
+				</div>
+				<div class="re_credits">
+					Re-Test Credit: {{paper.retest_credit}}
+				</div>
+			</div>
+			<div class="take_test">
+				<button ion-button class="start" (click)="start(exam,level,paper)">Start Test</button>
+				<button ion-button class="re" (click)="retest(exam,level,paper)">Re-Take Test</button>
+			</div>
+		</div>
+	</div>
+
+	<div style="background:url('../assets/imgs/books_life.jpg');background-size:cover;" class="bottom" text-center>
+		<h3 class="bot">
+			<span class="bot_color">Start your Exam Preparation Now!</span>
+		</h3>
+		Practice, Analyze & Improve
+		<button ion-button color="light">Get Started for free!</button>
+	</div>
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="links">
+			<div class="link" text-center>
+				<ion-icon name="logo-facebook"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-twitter"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-linkedin"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-youtube"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-google"></ion-icon>
+			</div>
+		</div>
+		<br><br>
+		<div class="details" text-center>
+			<div class="copy">
+				Copyright &copy; SmartStudents
+			</div>
+			<div class="policy" text-center>
+				<ul type="none" class="ul">
+					<li class="li">Policy Policy</li>
+					<li class="li">&nbsp;|&nbsp;</li>
+					<li class="li">Terms & Condition</li>
+					<li class="li">&nbsp;|&nbsp;</li>
+					<li class="li">Contact Us</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</ion-content>

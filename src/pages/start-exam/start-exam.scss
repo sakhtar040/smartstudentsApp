@@ -1,0 +1,53 @@
+.quiz{
+	.quiz_menu{
+		height: 50px;
+		.menu_tabs{
+			float: left;
+		}
+	}
+	.slides{
+		.quiz_slide{
+			.options{
+				.options_value{
+					width: 95%;margin: 1%;
+					padding: 10px;
+					background: #fff;
+					border: 1px solid silver;
+					min-height: 30px;
+					cursor: pointer;
+					overflow: auto;
+					float: left;
+					box-sizing: border-box;
+				}
+				.options_value:hover{border: 1px solid #488aff;}
+				.options_value span{
+					width: 15px;
+					height: 15px;
+					padding: 2px;text-align: center;
+					color: #488aff;
+					font-weight: bold;
+					margin-right: 5px;
+					float: left;font-size: 13px;
+				}
+				.space_answer{
+					width: 20px;
+					padding-left: 2px;
+					padding-right: 2px;
+					height: 30px;float: left;
+					margin-right: 10px;
+					position: relative;
+					border-radius: 2px;
+				}
+				.radio_check{
+					width: 100%;
+					height: 20px;
+					float: right;
+					text-align: left;
+					position: absolute;
+					bottom: 0px;
+					display: none;
+				}
+			}
+		}
+	}
+}

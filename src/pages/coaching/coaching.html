@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-navbar color="light">
+  	<ion-title>Coaching Institutes</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="coaching">
+ <!--Top Section-->
+ <div style="background:url('http://smartstudents.co.in/avator/graduate-students.jpg');background-size:cover;" class="top" text-center>
+   <h3 class="head">Top <span class="head_color">Coaching Instututes</span> Near You</h3>
+   <form action="">
+    <div class="form-group">
+      <ion-searchbar (click)="searchPage()"></ion-searchbar>
+    </div>
+  </form>
+</div>
+
+<!--Explore Section-->
+<div class="explore" text-center>
+ <span class="explore_head">Explore Colleges & Choose Best-Fit College For You</span>
+ <div class="card_10">
+   <ion-card>
+     <img src="{{image}}1600x600_Engineering1.jpg"/>
+     <ion-card-content>
+      <ion-card-header>BOARD EXAMS</ion-card-header>
+      <ion-list>
+        <ion-item *ngFor=" let b of board" (click)="viewItem(b)">
+          <ion-avatar item-start>
+            <img src="{{logo_url}}/{{b.org_id}}/{{b.org_logo}}" class="img-logo">
+          </ion-avatar>
+          <h4>{{b.org_name}}</h4>
+          <p>{{b.name}} • Estb In: {{b.org_estb_in}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="card_10">
+ <ion-card>
+   <img src="{{image}}1600x600_Engineering1.jpg"/>
+   <ion-card-content>
+    <ion-card-header>ENGINEERING</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor=" let eng of engg" (click)="viewItem(eng)">
+        <ion-avatar item-start>
+          <img src="{{logo_url}}/{{eng.org_id}}/{{eng.org_logo}}" class="img-logo">
+        </ion-avatar>
+        <h4>{{eng.org_name}}</h4>
+        <p>{{eng.name}} • Estb In: {{eng.org_estb_in}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="card_10">
+ <ion-card>
+   <img src="{{image}}1600x600_Engineering1.jpg"/>
+   <ion-card-content>
+    <ion-card-header>MANAGEMENT</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor=" let mba of mbas" (click)="viewItem(mba)">
+        <ion-avatar item-start>
+          <img src="{{logo_url}}/{{mba.org_id}}/{{mba.org_logo}}" class="img-logo">
+        </ion-avatar>
+        <h4>{{mba.org_name}}</h4>
+        <p>{{mba.name}} • Estb In: {{mba.org_estb_in}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="card_10">
+ <ion-card>
+   <img src="{{image}}1600x600_Engineering1.jpg"/>
+   <ion-card-content>
+    <ion-card-header>MEDICAL</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor=" let med of medi" (click)="viewItem(med)">
+        <ion-avatar item-start>
+          <img src="{{logo_url}}/{{med.org_id}}/{{med.org_logo}}" class="img-logo">
+        </ion-avatar>
+        <h4>{{med.org_name}}</h4>
+        <p>{{med.name}} • Estb In: {{med.org_estb_in}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="card_10">
+ <ion-card>
+   <img src="{{image}}1600x600_Engineering1.jpg"/>
+   <ion-card-content>
+    <ion-card-header>LAW</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor=" let law of laws" (click)="viewItem(law)">
+        <ion-avatar item-start>
+          <img src="{{logo_url}}/{{law.org_id}}/{{law.org_logo}}" class="img-logo">
+        </ion-avatar>
+        <h4>{{law.org_name}}</h4>
+        <p>{{law.name}} • Estb In: {{law.org_estb_in}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="card_10">
+ <ion-card>
+   <img src="{{image}}1600x600_Engineering1.jpg"/>
+   <ion-card-content>
+    <ion-card-header>Hospitality & Tourism</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor=" let hos of hosp" (click)="viewItem(hos)">
+        <ion-avatar item-start>
+          <img src="{{logo_url}}/{{hos.org_id}}/{{hos.org_logo}}" class="img-logo">
+        </ion-avatar>
+        <h4>{{hos.org_name}}</h4>
+        <p>{{hos.name}} • Estb In: {{hos.org_estb_in}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</div>
+</div>
+
+<!--Footer-->
+<div class="footer">
+  <div class="links">
+    <div class="link" text-center>
+      <a href="https://www.facebook.com/Smart-Students-153047311975490/">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://twitter.com/Smart__Students">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://www.linkedin.com/company/smart-students">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://plus.google.com/u/0/115468258445665218104">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://plus.google.com/u/0/115468258445665218104">
+        <ion-icon name="logo-google"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <br><br>
+  <div class="details" text-center>
+    <div class="copy">
+      Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+    </div>
+    <br>
+    <div class="policy">
+      <a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+    </div>
+    <p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+  </div>
+</div>
+</ion-content>

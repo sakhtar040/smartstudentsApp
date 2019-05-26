@@ -1,0 +1,120 @@
+<!--Header-->
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>About Us</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openModal()">
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<!--Content-->
+<ion-content class="about">
+	<!--Top Section-->
+	<div style="background:url('http://smartstudents.co.in/avator/graduate-students.jpg');background-size:cover;" class="top" text-center>
+		<h5 class="head">
+			The Most Intelligent Career Selection For <span class="head_color">{{service_item}}</span>
+		</h5>
+		<form action="">
+			<div class="form-group">
+				<ion-searchbar (click)="searchPage()"></ion-searchbar>
+			</div>
+		</form>
+	</div>
+
+	<div class="about_content">
+		<div class="first" text-center>
+			<p class="light_text">
+				SmartStudents.co.in is a product in education sector, registered with GenexTek Solutions Pvt Ltd. SmartStudents is a revolutionary platform for education system in India.
+			</p>
+		</div>
+		<div class="second" text-center>
+			<p class="light_text">
+				It is the most engaging platform for students, Parents and Educational organizations. SmartStudents.co.in is helping students & parents to choose best career options for the prominent future.
+			</p>
+		</div>
+		<div class="third" text-center>
+			<p class="light_text">
+				We are having huge data of schools, Coaching Institutes, Colleges, Indian & Foreign Universities, Study Abroad programs, Prac-Competitive Exams, Career Counselling options, Education Loan.
+			</p>
+		</div>
+	</div>
+
+	<div class="about_content_second" text-center>
+		<div class="content_first">
+			<h5 class="title">SmartStudents For Students</h5>
+			<p class="light_text">A very extensive and transparent platform for all the best possible academic & career needs for students. We have a very wide and filtered data of “Schools, Coaching Institutes, Colleges, Indian & Foreign Universities, Online Prac-Competitive Exams, Bank Education Loan” present, from basic schooling till higher education for your betterment. Students can take Online practice Competitive Exams just like the realistic feel of actual examination. And get the actual ranking among your competitors on national level as well. Students could opt very crisp and smart career counselling with our experienced councellors. And can have all the information of more then 23000 Schools, 9500 Coaching Institutes, 16000 colleges, 2000 universities and 4500 Courses.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}a-students.jpg">
+		</div>
+
+		<div class="content_second">
+			<h5 class="title">SmartStudents For Parents</h5>
+			<p class="light_text">We take the stress out from you, for your wards. Our experts are always stand with you and your child to choose best options available for career selection not limit to this even we help your wards to improve the academic records in the present competitive era.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}a-parents.jpg">
+		</div>
+
+		<div class="content_third">
+			<h5 class="title">SmartStudents For Institutes</h5>
+			<p class="light_text">SmartStudents is an innovative platform to make education system reliably connected among both students and organizations. Students & education sector players trust our strong & secluded database for betterment. Institutes could get a huge leads of segregated candidates, and can make a bold presence among students in INDIA. We make educational organizations very Hi-Tech with our ERP systems and making the operations hassel-free for students, parents and administration.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}a_institute.jpg">
+		</div>
+
+		<div class="content_fourth">
+			<h5 class="title">SmartStudents For Government</h5>
+			<p class="light_text">We strongly believe that government is taking steps to enhance the education system in India. SmartStudents is taking a stand with the vision of the government by offering for integrating our ERP systems for various projects of state and central government.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}a_government.jpg">
+		</div>
+	</div>
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="links">
+			<div class="link" text-center>
+				<a href="https://www.facebook.com/Smart-Students-153047311975490/">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://twitter.com/Smart__Students">
+					<ion-icon name="logo-twitter"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://www.linkedin.com/company/smart-students">
+					<ion-icon name="logo-linkedin"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-youtube"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-google"></ion-icon>
+				</a>
+			</div>
+		</div>
+		<br><br>
+		<div class="details" text-center>
+			<div class="copy">
+				Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+			</div>
+			<br>
+			<div class="policy">
+				<a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+			</div>
+			<p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+		</div>
+	</div>
+</ion-content>

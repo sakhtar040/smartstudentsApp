@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-buttons end>
+			<button ion-button icon-only (click)="refresh()">
+				<ion-icon name="refresh"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content color="dark">
+	<ion-searchbar (ionInput)="getItems($event, n)"></ion-searchbar>
+	<div class="search_item">
+		What are you looking for<br>
+		<div class="search_t">
+			<div class="search_tab active" style="border-right: 1px solid silver;" *ngFor="let n of list" (click)="select(n, $event, n)" [ngClass]="{active: isActive(n)}">{{n}}</div>
+		</div>
+		<ion-list>
+			<ion-item *ngFor="let item of items" (click)="viewItem(item)">
+				<ion-avatar item-start>
+					<img src='{{logo_url}}/{{item.org_id}}/{{item.org_logo}}' class="img-logo">
+				</ion-avatar>
+				<h4>{{item.org_name}}</h4>
+				<p>{{item.name}} • Estb In: {{item.org_estb_in}}</p>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>

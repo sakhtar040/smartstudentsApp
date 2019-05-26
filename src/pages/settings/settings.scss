@@ -1,0 +1,32 @@
+.settings{
+	.photo{
+		width: 100%;
+
+		.img-logo{
+			border: 2px solid gray;
+			border-radius: 100%;
+			height: 150px;
+		}
+	}
+
+	.registration_con{
+		.register_form{
+			padding-top: 20px;
+
+			.title{
+				color: #0088ff;
+			}
+			.form{
+				ion-list{
+					padding: 0px;
+					ion-item{
+						padding: 0px;
+						ion-datetime{
+							padding: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

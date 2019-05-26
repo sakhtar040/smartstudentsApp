@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title>Contact US</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contact">
+  <div class="coun_form_head">
+    <div class="form_head" text-center>
+      <h3>Please fill this form if you have any query.</h3>
+    </div>
+  </div>
+  <div class="coun_form">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="Data.name" placeholder="Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="Data.email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="Data.contact" maxlength="10" placeholder="Contact"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea placeholder="Type any Query*" lineHeight="22" [(ngModel)]="Data.msg"></ion-textarea>
+      </ion-item>
+      <button ion-button block color="primary" (click)="contact_form()">Submit</button>
+    </ion-list>
+  </div>
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="links">
+      <div class="link" text-center>
+        <a href="https://www.facebook.com/Smart-Students-153047311975490/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://twitter.com/Smart__Students">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://www.linkedin.com/company/smart-students">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-google"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <br><br>
+    <div class="details" text-center>
+      <div class="copy">
+        Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+      </div>
+      <br>
+      <div class="policy">
+        <a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+      </div>
+      <p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+    </div>
+  </div>
+</ion-content>

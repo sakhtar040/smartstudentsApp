@@ -1,0 +1,65 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openExamPop($event)">
+				<ion-icon name="options"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+<ion-content class="quiz">
+	<div class="quiz_menu">
+		<div class="menu_tabs" *ngFor="let c of cat">{{c.name}}</div>
+	</div>
+	<ion-slides class="slides">
+		<ion-slide *ngFor="let q of questions_data">
+			<div class="quiz_slide">
+				<div class="ques">
+					<ion-card>
+						<ion-card-content>
+							Q {{q.aqid}}. {{q.ques}}
+						</ion-card-content>
+					</ion-card>
+				</div>
+				<div class="options">
+					<div class="options_value" (click)="select_answer($event, 'a')">
+						<div class="space_answer">
+							<span>A</span>
+							<div class="radio_check">
+								<input type="radio" name="answer" value="a"/>
+							</div>
+						</div>
+						{{q.op1}}
+					</div>
+					<div class="options_value" (click)="select_answer($event, 'b')">
+						<div class="space_answer">
+							<span>B</span>
+							<div class="radio_check">
+								<input type="radio" name="answer" value="b"/>
+							</div>
+						</div>
+						{{q.op2}}
+					</div>
+					<div class="options_value" (click)="select_answer($event, 'c')">
+						<div class="space_answer">
+							<span>C</span>
+							<div class="radio_check">
+								<input type="radio" name="answer" value="c"/>
+							</div>
+						</div>
+						{{q.op3}}
+					</div>
+					<div class="options_value" (click)="select_answer($event, 'd')">
+						<div class="space_answer">
+							<span>D</span>
+							<div class="radio_check">
+								<input type="radio" name="answer" value="d"/>
+							</div>
+						</div>
+						{{q.op4}}
+					</div>
+				</div>
+			</div>
+		</ion-slide>
+	</ion-slides>
+</ion-content>

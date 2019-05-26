@@ -1,0 +1,145 @@
+.school{
+	.top{
+		height: 150px;
+		padding: 10px;
+
+		.head{
+			color: #fff;
+			font-family: Raleway;
+
+			.head_color{
+				color: #ffff53;
+			}
+		}
+	}
+
+	.top_10{
+		background-color: #F6F8FA;
+		margin-top: 20px;
+		padding: 5px 0px 5px 0px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.card_10{
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+				height: 60px;
+			}
+
+			ion-card{
+				.img-top{
+					height: 150px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.top_5{
+		background-color: #F6F8FA;
+		margin-top: 20px;
+		padding: 2px 0px 2px 0px;
+
+		.title{
+			color:#0088ff;
+		}
+
+		.tabs{
+			padding: 0px 10px 0px 10px;
+
+			.tabs_tab{
+				width: 33%;
+				height: 22px;
+				background: #fff;
+				text-align: center;
+				color: #717a81;
+				font-weight: bold;
+				font-size: 14px;
+				padding-top: 2px;
+				float: left;
+				border-right: 1px solid silver;
+			}
+			.tabs_tab:hover, .tabs_tab.active{
+				color: #fff;
+				background: #1F90D6;
+			}
+		}
+		.day{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+		.daycum{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+		.board{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+	}
+
+	.footer{
+		width: 100%;
+		height: 150px;
+		background-color: #999;
+
+		.links{
+			padding-top: 35px;
+			margin-left: 15%;
+			width: 70%;
+
+			.link{
+				float: left;
+				width: 20%;
+			}
+		}
+
+		.details{
+			.policy{
+				a{
+					text-decoration: none;
+					color: black;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

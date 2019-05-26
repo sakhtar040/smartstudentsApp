@@ -1,0 +1,103 @@
+.exam{
+	.top{
+		color: #99a8a3;
+		padding-bottom: 10px;
+		.head{
+			color: #99a8a3;
+		}
+	}
+	.exam_main{
+		.title{
+			color: #0088ff;
+		}
+		.para{
+			padding: 10px;
+			color: #99a8a3;
+			.first{
+				color: #0088ff;
+			}
+		}
+		.exams{
+			height: auto;
+			.e{
+				float: left;
+				width: 30%;
+				height: 50px;
+				margin: 5px;
+				background: url('../assets/imgs/course-bg.jpg');
+				background-size: cover;padding: 15px;
+				border-radius: 5px;text-align: center;color: aliceblue;font-weight: 500;
+				font-family: 'Roboto Condensed', sans-serif;font-size: 15px;
+				-webkit-transition: all .5s cubic-bezier(.165,.84,.44,1);
+				-o-transition: all .5s cubic-bezier(.165,.84,.44,1);
+				transition: all .5s cubic-bezier(.165,.84,.44,1);
+				-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+				box-shadow: 0 1px 1px rgba(0,0,0,.2)
+			}
+			.e:hover{
+				-webkit-transform: scale(1.05);
+				-ms-transform: scale(1.05);
+				-o-transform: scale(1.05);
+				transform: scale(1.05);
+			}
+			.e small{font-size: 13px;}
+		}
+	}
+	.exam_content{
+		background: #F6F8FA;
+		margin-top: 10px;
+		padding: 10px;
+		.title{
+			font-family: 'Lato', sans-serif;font-weight: 100;
+		}
+		.light_text{
+			color: #99a8a3;
+		}
+		.imgs{width: 100%;}
+		.imgs img{	
+			width: 100%;
+			-webkit-box-shadow: 0 0 15px rgba(0,0,0,.2);
+			box-shadow: 0 0 15px rgba(0,0,0,.2);
+			margin-top: 10px;
+			border: 10px solid #fff;
+		}
+	}
+	.bottom{
+		margin-bottom: 20px;
+		color: #99a8a3;
+		padding: 10px;
+		.bot{
+			.bot_color{
+				color: #fff;
+				font: Raleway;
+			}
+		}
+	}
+
+	.footer{
+		width: 100%;
+		height: 150px;
+		background-color: #999;
+
+		.links{
+			padding-top: 35px;
+			margin-left: 15%;
+			width: 70%;
+
+			.link{
+				float: left;
+				width: 20%;
+			}
+		}
+
+		.details{
+			.policy{
+				a{
+					text-decoration: none;
+					color: black;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

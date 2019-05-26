@@ -1,0 +1,31 @@
+
+<ion-content>
+  <div class="background">
+  	<ion-card>
+     <ion-buttons end class="btn_cross">
+       <button ion-button clear icon-only style="color: red;" (click)="closeModal()">
+         <ion-icon name="md-close"></ion-icon>
+       </button>
+     </ion-buttons>
+     <ion-card-header text-center>
+      <img src="{{image}}logo.png"><br>
+       Login
+     </ion-card-header>
+     <ion-card-content>
+       <ion-list>
+         <ion-item class="item">
+           <ion-label floating>Email</ion-label>
+           <ion-input type="email" [(ngModel)]="userData.email"></ion-input>
+         </ion-item>
+         <ion-item class="item">
+           <ion-label floating>Password</ion-label>
+           <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+         </ion-item>
+         <button ion-button block color="primary" (click)="login()">Login</button>
+       </ion-list>
+       <a><b class="forgot" (click)="forgot()">forgot password?</b></a><br>
+       New User? <a (click)="register"><b (click)="register()">Register</b></a> here, its Free
+     </ion-card-content>
+   </ion-card>
+ </div>
+</ion-content>

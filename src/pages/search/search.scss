@@ -1,0 +1,33 @@
+.search_item{
+	padding: 0px 10px 0px 10px;
+	width: 100%;
+
+	.search_t{
+
+		.search_tab{
+			width: 50%;
+			height: 22px;
+			background: #fff;
+			text-align: center;
+			color: #717a81;
+			font-weight: bold;
+			font-size: 14px;
+			padding-top: 2px;
+			float: left;
+		}
+		.search_tab.active, .search_tab:hover{
+			color: #fff;
+			background: #1F90D6;
+		}
+	}
+
+	ion-list{
+		padding: 0px;
+
+		ion-item{
+			padding: 0px;
+			margin: 0px;
+			text-align: left;
+		}
+	}
+}

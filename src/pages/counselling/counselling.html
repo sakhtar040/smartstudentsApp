@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title>Counselling</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="counselling">
+  <div class="top_content" text-center>
+    <p class="para">
+      <span class="first">MAKE YOUR EXCELLENT EDUCATIONAL TRACK RECORD</span><br>
+      By Choosing Our Expert Educational-Counsellors
+    </p>
+  </div>
+  <div class="counselling_content">
+    <div class="category">
+      <div class="select_category">
+        <div><img src="{{image}}c_foundation.jpg"></div>
+        <div>Foundation-Proficiency</div>
+      </div>
+      <div class="select_category">
+        <div><img src="{{image}}c_careerselection.jpg"></div>
+        <div>Career-Selection</div>
+      </div>
+      <div class="select_category">
+        <div><img src="{{image}}c_compexams.png"></div>
+        <div>Target-Competitive Exam</div>
+      </div>
+    </div>
+    <div class="category">
+      <div class="select_category">
+        <div><img src="{{image}}c_collegeselection.jpg"></div>
+        <div>College-Selection</div>
+      </div>
+      <div class="select_category">
+        <div><img src="{{image}}c_graduation.png"></div>
+        <div>Graduation-Strategy</div>
+      </div>
+      <div class="select_category">
+        <div><img src="{{image}}c_mastersdegree.png"></div>
+        <div>Master's degree-Proficiency</div>
+      </div>
+    </div>
+    <div class="category">
+      <div class="select_category">
+      </div>
+      <div class="select_category">
+        <div><img src="{{image}}c_studyabroad.png"></div>
+        <div>Study-Abroad Programs</div>
+      </div>
+      <div class="select_category">
+      </div>
+    </div>
+  </div>
+
+  <div class="coun_content" text-center style="margin-top: 350px;">
+    <div class="content_first">
+      <h5 class="title">Get a limitless opportunity for your dreams.</h5>
+      <p class="light_text">We insure that you get a acccurate solution from our experties and get a Instant And Easy information With us we are here with a transparent platform for all the best possible academic & career needs for students.</p>
+    </div>
+    <div class="imgs">
+      <img src="{{image}}counselling_ft.jpg">
+    </div>
+    <div class="content_second">
+      <h5 class="title">Smart career counselling with our experienced councellors.</h5>
+      <p class="light_text">Our advance expert systems Knows that what can be the best for your career so we are providing a large scale opportunity .Students could opt very crisp and smart career counselling with our experienced councellors. And can have all the information of more then 23000 Schools, 9500 Coaching Institutes, 16000 colleges, 2000 universities and 4500 Courses.</p>
+    </div>
+    <div class="imgs">
+      <img src="{{image}}counselling_ft1.jpg">
+    </div>
+  </div>
+
+  <div class="coun_form_head">
+    <div class="form_head" text-center>
+      <h3>We are happy to help you with our expert Counsellor</h3>
+    </div>
+  </div>
+  <div class="coun_form">
+    <ion-list>
+      <ion-label>Please Provide your Details</ion-label>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="counsellingData.name" placeholder="Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="counsellingData.email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="counsellingData.contact" maxlength="10" placeholder="Contact"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-datetime displayFormat="DD/MMMM/YYYY" pickerFormat="MMMM DD YYYY" placeholder="Date of Birth" [(ngModel)]="counsellingData.dob"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Select State</ion-label>
+        <ion-select [(ngModel)]="counsellingData.state">
+          <ion-option *ngFor="let state of state_data" value="{{state.id}}">
+            {{state.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="counsellingData.city" placeholder="City"></ion-input>
+      </ion-item>
+      <ion-label>Select what are you looking for</ion-label>
+      <ion-item>
+        <ion-label>Schools</ion-label>
+        <ion-select [(ngModel)]="counsellingData.category">
+          <ion-option *ngFor="let state of state_data" value="{{state.id}}">
+            {{state.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Coaching Institutes</ion-label>
+        <ion-select [(ngModel)]="counsellingData.category">
+          <ion-option *ngFor="let state of state_data" value="{{state.id}}">
+            {{state.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Colleges</ion-label>
+        <ion-select [(ngModel)]="counsellingData.category">
+          <ion-option *ngFor="let state of state_data" value="{{state.id}}">
+            {{state.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-textarea placeholder="Type to compose" lineHeight="22" [(ngModel)]="counsellingData.msg"></ion-textarea>
+      </ion-item>
+      <button ion-button block color="primary" (click)="counselling_data()">Submit</button>
+    </ion-list>
+  </div>
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="links">
+      <div class="link" text-center>
+        <a href="https://www.facebook.com/Smart-Students-153047311975490/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://twitter.com/Smart__Students">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://www.linkedin.com/company/smart-students">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+      <div class="link" text-center>
+        <a href="https://plus.google.com/u/0/115468258445665218104">
+          <ion-icon name="logo-google"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <br><br>
+    <div class="details" text-center>
+      <div class="copy">
+        Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+      </div>
+      <br>
+      <div class="policy">
+        <a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+      </div>
+      <p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,20 @@
+.registration_con{
+	.register_form{
+		padding-top: 20px;
+
+		.title{
+			color: #0088ff;
+		}
+		.form{
+			ion-list{
+				padding: 0px;
+				ion-item{
+					padding: 0px;
+					ion-datetime{
+						padding: 0px;
+					}
+				}
+			}
+		}
+	}
+}

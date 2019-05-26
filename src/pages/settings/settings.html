@@ -1,0 +1,38 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>
+			Settings
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="settings">
+	<div class="photo" text-center>
+		<img src="{{photo}}" class="img-logo" (click)="change()">
+	</div>
+	<br>
+	<div class="register_form" text-center>
+		<h4 class="title">Update Details</h4>
+		<div class="form">
+			<ion-list>
+				<ion-input type="hidden" value="{{id}}" [(ngModel)]="userData.id"></ion-input>
+				<ion-input type="hidden" value="{{Email}}" [(ngModel)]="userData.oemail"></ion-input>
+				<ion-item>
+					<ion-input type="text" placeholder="Name" value="{{name}}" [(ngModel)]="userData.name"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="text" placeholder="Email" value="{{Email}}" [(ngModel)]="userData.email"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="text" maxlength="10" value="{{phone}}" [(ngModel)]="userData.contact" placeholder="Contact"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" [(ngModel)]="userData.password" placeholder="New Password"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" [(ngModel)]="userData.pass1" placeholder="Confirm New Password"></ion-input>
+				</ion-item>
+				<button ion-button color="primary" block (click)="update()">Update</button>
+			</ion-list>
+		</div>
+	</div>
+</ion-content>

@@ -1,0 +1,192 @@
+<ion-header>
+  <ion-navbar color="light">
+  	<ion-title>Education Loan</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="loan">
+  <!--Top Section-->
+  <div style="background:url('http://smartstudents.co.in/avator/education_loan123.jpg');background-size:cover;" class="top" text-center></div>
+  <div class="overview">
+    <h4 style="color: Green;">Overview:</h4>
+    <p class="data" text-justify>
+      Nothing can stop when it comes with the concern about your ward’s bright and successful future. Quality education can only make it possible. Rising cost of education day-by-day making higher education difficult to self-finance all the time in India as well as abroad. 
+      Hence there is a huge demand for loans now-a-days to cover educational expenses for better and bright future. Nothing can hinders the progress of your wards either in India or abroad. Presently almost every bank and NBFC is offering education loan with competitive rate of interest for graduate, post-graduate and other degrees.
+      We  provide loans not only for tution fees and registration/exam fees, but also other expenses like uniforms, travelling expenses, study materials. Other expenses covered by most of the loans provided are : 
+    </p>
+    <ul class="edu_list">
+      <li class="list_item">For purchase of books, uniforms, study materials etc.</li>
+      <li class="list_item">For Purchase of computers/laptops.</li>
+      <li class="list_item">For Exam fees, Lab/Research expenses etc.</li>
+      <li class="list_item">For travel expenses like studies abroad etc.</li>
+      <li class="list_item">For expenses required for successfully complete the course, Study tours, Thesis work, Projects/lap expenses etc.</li>
+    </ul>
+  </div>
+  <div class="loan">
+    <h4 style="color: green;">Education Loan by Top Bank</h4>
+    <ul class="edu_list">
+      <li class="list_item">Axis Bank</li>
+      <li class="list_item">Bank of Baroda</li>
+      <li class="list_item">Canara Bank</li>
+      <li class="list_item">HDFC Bank</li>
+      <li class="list_item">ICICI Bank</li>
+      <li class="list_item">Kotak Mahindra Bank</li>
+      <li class="list_item">PNB Bank</li>
+      <li class="list_item">State Bank of India</li>
+    </ul>
+  </div>
+  <div class="loan_form_head">
+  	<div class="form_head" text-center>
+  		<h3>Apply For Education Loan</h3>
+  		Please Provide Your Details
+  	</div>
+  </div>
+  <div class="loan_form">
+    <ion-list>
+      <ion-label>Please Provide your Details</ion-label>
+      <ion-item>
+        <ion-input type="text"  placeholder="name" [(ngModel)]="loanData.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text"  placeholder="Email" [(ngModel)]="loanData.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text"  maxlength="10" placeholder="Contact" [(ngModel)]="loanData.contact"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-datetime displayFormat="DD/MMMM/YYYY" pickerFormat="MMMM DD YYYY" placeholder="Date of Birth" [(ngModel)]="loanData.dob"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Select State</ion-label>
+        <ion-select [(ngModel)]="loanData.state">
+          <ion-option *ngFor="let state of state_data" value="{{state.id}}">
+            {{state.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="City" [(ngModel)]="loanData.city"></ion-input>
+      </ion-item>
+      <ion-list radio-group [(ngModel)]="loanData.stay">
+        <ion-list-header>
+         Where are you planning to stay:
+       </ion-list-header>
+       <ion-item>
+        <ion-label>India</ion-label>
+        <ion-radio value="0" ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>US</ion-label>
+        <ion-radio value="1"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>US</ion-label>
+        <ion-radio value="2"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Australia</ion-label>
+        <ion-radio value="3"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Germany</ion-label>
+        <ion-radio value="4"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Other</ion-label>
+        <ion-radio value="5"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="loanData.pursue">
+      <ion-list-header>
+       What do you want to Pursue:
+     </ion-list-header>
+     <ion-item>
+      <ion-label>Graduate</ion-label>
+      <ion-radio value="0"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>PostGraduate</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="loanData.money">
+    <ion-list-header>
+     How much would you like to borrow:
+   </ion-list-header>
+   <ion-item>
+    <ion-label>2 Lakh</ion-label>
+    <ion-radio value="2"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>5 Lakh</ion-label>
+    <ion-radio value="5"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>10 Lakh</ion-label>
+    <ion-radio value="10"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>15 Lakh</ion-label>
+    <ion-radio value="15"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Other</ion-label>
+    <ion-radio value="other"></ion-radio>
+  </ion-item>
+</ion-list>
+<ion-item>
+  <ion-textarea placeholder="What are you looking for" lineHeight="22" [(ngModel)]="loanData.msg"></ion-textarea>
+</ion-item>
+<button ion-button block color="primary" (click)="loan()">Submit</button>
+</ion-list>
+</div>
+
+<!--Footer-->
+<div class="footer">
+  <div class="links">
+    <div class="link" text-center>
+      <a href="https://www.facebook.com/Smart-Students-153047311975490/">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://twitter.com/Smart__Students">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://www.linkedin.com/company/smart-students">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://plus.google.com/u/0/115468258445665218104">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+    </div>
+    <div class="link" text-center>
+      <a href="https://plus.google.com/u/0/115468258445665218104">
+        <ion-icon name="logo-google"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <br><br>
+  <div class="details" text-center>
+    <div class="copy">
+      Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+    </div>
+    <br>
+    <div class="policy">
+      <a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+    </div>
+    <p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+  </div>
+</div>
+</ion-content>

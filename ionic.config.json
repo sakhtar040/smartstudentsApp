@@ -1,0 +1,7 @@
+{
+  "name": "smartstudents",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

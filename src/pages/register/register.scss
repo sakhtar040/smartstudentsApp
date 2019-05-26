@@ -1,0 +1,39 @@
+.register{
+	
+	.register_content{
+		padding-top: 20px;
+
+		.title{
+			color: #0088ff;
+		}
+		.category{
+			height: 30px;
+			width: 100%;
+
+			.select_category{
+				height: 30px;
+				width: 33%;
+				float: left;
+				padding: 10px;
+				color: #0088ff;
+			}
+		}
+	}
+
+	.why{
+		margin-top: 100px;
+
+		.title{
+			color: #0088ff;
+		}
+		.why_content{
+			color: green;
+		}
+		.why_picture{
+			margin-top: 20px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>Select Level</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openModal()">
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+<ion-content class="level">
+	<!--Top Section-->
+	<div style="background:url('../assets/imgs/banner.jpg');background-size:cover;" class="top" text-center>
+		<h3 class="head">
+			<span class="head_color">{{eid.ename}}</span>
+		</h3>
+		<button ion-button >Get Started for free!</button>
+	</div>
+
+	<div class="level_main" text-center>
+		<h5 class="title">
+			{{eid.ename}} - Online Exam Preparation for {{eid.etags}}
+		</h5>
+		<p class="para">
+			Start Attempting SmartStudents Free Mock Tests & Live Tests for {{eid.etags}} and boost your Exam Preparation. SmartStudents Online Test Series gives you Personalized Performance Analysis & Detailed Solutions with All India Rankings to Improve your SSC Score.
+		</p>
+		<div class="levels">
+			<div class="l" *ngFor="let level of levels" (click)="papers(level,eid)">
+				Level {{level}}
+			</div>
+		</div>
+	</div>
+	<div style="background:url('../assets/imgs/books_life.jpg');background-size:cover;" class="bottom" text-center>
+		<h3 class="bot">
+			<span class="bot_color">Start your Exam Preparation Now!</span>
+		</h3>
+		Practice, Analyze & Improve
+		<button ion-button color="light">Get Started for free!</button>
+	</div>
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="links">
+			<div class="link" text-center>
+				<ion-icon name="logo-facebook"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-twitter"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-linkedin"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-youtube"></ion-icon>
+			</div>
+			<div class="link" text-center>
+				<ion-icon name="logo-google"></ion-icon>
+			</div>
+		</div>
+		<br><br>
+		<div class="details" text-center>
+			<div class="copy">
+				Copyright &copy; SmartStudents
+			</div>
+			<div class="policy" text-center>
+				<ul type="none" class="ul">
+					<li class="li">Policy Policy</li>
+					<li class="li">&nbsp;|&nbsp;</li>
+					<li class="li">Terms & Condition</li>
+					<li class="li">&nbsp;|&nbsp;</li>
+					<li class="li">Contact Us</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</ion-content>

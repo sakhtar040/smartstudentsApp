@@ -1,0 +1,287 @@
+<ion-content no-border class="details">
+	<div class="o_photo_div">
+		<img src='{{logo_url}}/{{item.org_id}}/{{item.org_photo}}' class="o_photo">
+	</div>
+	<ion-navbar transparent>
+	</ion-navbar>
+	<div class="top_details">
+		<div class="o_logo_div">
+			<img src="{{logo_url}}/{{item.org_id}}/{{item.org_logo}}" class="o_logo">
+		</div>
+		<div class="o_name">
+			<h4>{{item.org_name}}</h4>
+		</div>
+	</div>
+	<div class="rating">{{avg}}</div>
+	<div class="apply" (click)="apply(item.org_id)">Apply</div>
+
+	<div class="content">
+		<ion-toolbar no-border-bottom>
+			<ion-segment color="primary" [(ngModel)]="tabs">
+				<ion-segment-button (click)="selectTab(0)" value="0">Info</ion-segment-button>
+				<ion-segment-button (click)="selectTab(1)" value="1">Courses</ion-segment-button>
+				<ion-segment-button (click)="selectTab(2)" value="2">Reviews</ion-segment-button>
+				<ion-segment-button (click)="selectTab(3)" value="3">Faculty</ion-segment-button>
+				<ion-segment-button (click)="selectTab(4)" value="4">Gallery</ion-segment-button>
+			</ion-segment>
+		</ion-toolbar>
+		<ion-slides #pageSlider (ionSlideWillChange)="changeWillSlide($event)">
+			<ion-slide>
+				<div class="about" text-left>
+					<h5 class="title">About</h5>
+					Basic Information
+					<ion-card>
+						<ion-card-content text-justify *ngIf="info">
+							{{info_content}}
+						</ion-card-content>
+						<ion-card-content>
+							Type: {{org_type}}<br>
+							Established In: {{item.org_estb_in}}<br>
+							{{item.org_name}}
+						</ion-card-content>
+					</ion-card>
+				</div>
+				<div class="courses" text-left>
+					<ion-list>
+						<ion-item *ngFor="let course of courses_data">
+							<h4 class="title">{{course.course_name}}</h4>
+							Fee: <ion-icon name="cash"></ion-icon> {{course.per_year_fee}}/Year
+						</ion-item>
+					</ion-list>
+				</div>
+				<div class="reviews" text-left>
+					<h4 class="title">Rating</h4>
+					Narrowed down on various factors
+					<ion-card>
+						<ion-card-content>
+							<div class="rev">
+								<div class="icon">
+									<ion-icon name="school"></ion-icon>
+								</div>
+								<div class="right">
+									<div class="ratei"><span class="value">{{aca}}</span>/10</div>
+									<div class="tit">Academics</div>
+								</div>
+							</div>
+							<div class="rev">
+								<div class="icon">
+									<ion-icon name="person"></ion-icon>
+								</div>
+								<div class="right">
+									<div class="ratei"><span class="value">{{fac}}</span>/10</div>
+									<div class="tit">Faculty</div>
+								</div>
+							</div>
+							<div class="rev">
+								<div class="icon">
+									<ion-icon name="home"></ion-icon>
+								</div>
+								<div class="right">
+									<div class="ratei"><span class="value">{{inf}}</span>/10</div>
+									<div class="tit">Infrastructure</div>
+								</div>
+							</div>
+							<div class="rev">
+								<div class="icon">
+									<ion-icon name="archive"></ion-icon>
+								</div>
+								<div class="right">
+									<div class="ratei"><span class="value">{{exp}}</span>/10</div>
+									<div class="tit">Experience</div>
+								</div>
+							</div>
+							<div class="rev" style="width: 100%;">
+								<div class="icon">
+									<ion-icon name="book"></ion-icon>
+								</div>
+								<div class="right">
+									<div class="ratei"><span class="value">{{acc}}</span>/10</div>
+									<div class="tit">Accomodation</div>
+								</div>
+							</div>
+						</ion-card-content>
+					</ion-card>
+				</div>
+				<div class="ratings" text-left>
+					<h4 class="title">Reviews</h4>
+					Unbiased Reviews and Ratings
+					<ion-card>
+						<ion-card-content>
+							<div class="rate">
+								{{avg}}
+							</div>
+							<div class="rate_right">
+								<h4>Overall Rating</h4>
+								Based on {{count}} reviews
+							</div>
+						</ion-card-content>
+					</ion-card>
+					<ion-card *ngFor="let review of review_data">
+						<ion-card-content>
+							<div class="review">
+								<div class="name">
+									{{review.name}}
+								</div>
+								<div class="score">
+									{{review.avg}} / 10
+								</div>
+								<div class="data_review">
+									{{review.msg}}
+								</div>
+							</div>
+						</ion-card-content>
+					</ion-card>
+				</div>
+				<button ion-button block color="primary" (click)="write_review(item.org_id)">Write a Review</button>
+				<div class="contact" text-left *ngIf="planbuy">
+					<ion-card>
+						<ion-card-content>
+							<h4 class="title">Contact Details</h4>
+							<ion-list>
+								<ion-item>
+									Email: {{item.org_email}}
+								</ion-item>
+								<ion-item>
+									Contact: {{item.org_contact_no}}
+								</ion-item>
+								<ion-item>
+									Url: {{item.org_url}}
+								</ion-item>
+							</ion-list>
+						</ion-card-content>
+					</ion-card>
+				</div>
+				<div class="similar" text-left>
+					<div class="similar_title">
+						Similar Results
+					</div>
+					<ion-slides>
+						<ion-slide *ngFor="let similar of similar_data">
+							<div class="similar_content">
+								<ion-card (click)="viewItem(similar)">
+									<img src='{{logo_url}}/{{similar.org_id}}/{{similar.org_photo}}' class="img-top"/>
+									<ion-card-content>
+										<ion-list>
+											<ion-item>
+												<ion-avatar item-start>
+													<img src="{{logo_url}}/{{similar.org_id}}/{{similar.org_logo}}" class="img-logo">
+												</ion-avatar>
+												<h4>{{similar.org_name}}</h4>
+											</ion-item>
+										</ion-list>
+									</ion-card-content>
+								</ion-card>
+							</div>
+						</ion-slide>
+					</ion-slides>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="courses">
+					<ion-card>
+						<ion-card-header>
+							<h5 class="gall_title" text-left>Courses</h5>
+						</ion-card-header>
+						<ion-card-content>
+							<ion-list>
+								<ion-item *ngFor="let course of courses_data">
+									<h4>{{course.course_name}}</h4>
+									Fee: <ion-icon name="cash"></ion-icon> {{course.per_year_fee}}/Year
+								</ion-item>
+							</ion-list>
+						</ion-card-content>
+					</ion-card>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="all_reviews">
+					<ion-card>
+						<ion-card-header>
+							<h5 class="gall_title" text-left>Reviews</h5>
+						</ion-card-header>
+						<ion-card-content>
+							<ion-list>
+								<ion-item *ngFor="let review of review_data">
+									<h5>{{review.name}}</h5>
+									<p class="title">{{review.title}}</p>
+									<p class="msg">{{review.msg}}</p>
+									<div class="r">
+										<div class="rev">
+											<div class="icon">
+												<ion-icon name="school"></ion-icon>
+											</div>
+											<div class="right">
+												<div class="ratei"><span class="value">{{review.academics}}</span>/10</div>
+												<div class="tit">Academics</div>
+											</div>
+										</div>
+										<div class="rev">
+											<div class="icon">
+												<ion-icon name="person"></ion-icon>
+											</div>
+											<div class="right">
+												<div class="ratei"><span class="value">{{review.faculty}}</span>/10</div>
+												<div class="tit">Faculty</div>
+											</div>
+										</div>
+										<div class="rev">
+											<div class="icon">
+												<ion-icon name="home"></ion-icon>
+											</div>
+											<div class="right">
+												<div class="ratei"><span class="value">{{review.infrastructure}}</span>/10</div>
+												<div class="tit">Infrastructure</div>
+											</div>
+										</div>
+										<div class="rev">
+											<div class="icon">
+												<ion-icon name="archive"></ion-icon>
+											</div>
+											<div class="right">
+												<div class="ratei"><span class="value">{{review.exp}}</span>/10</div>
+												<div class="tit">Experience</div>
+											</div>
+										</div>
+										<div class="rev" style="width: 100%;">
+											<div class="icon">
+												<ion-icon name="book"></ion-icon>
+											</div>
+											<div class="right">
+												<div class="ratei"><span class="value">{{review.acc}}</span>/10</div>
+												<div class="tit">Accomodation</div>
+											</div>
+										</div>
+									</div>
+								</ion-item>
+							</ion-list>
+						</ion-card-content>
+					</ion-card>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="faculty">
+					<ion-card>
+						<ion-card-header>
+							<h5 class="gall_title" text-left>Faculty Details</h5>
+						</ion-card-header>
+						<ion-card-content>
+							<ion-list>
+								<ion-item *ngFor=" let faculty of faculty_data">
+									<ion-avatar item-start>
+										<img src="{{logo_url}}/{{item.org_id}}/{{faculty.profile}}" class="img-logo">
+									</ion-avatar>
+									<h4>{{faculty.name}}</h4>
+									<p>{{faculty.designation}} • {{faculty.exp}} yrs</p>
+								</ion-item>
+							</ion-list>
+						</ion-card-content>
+					</ion-card>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<h5 class="gall_title" text-left>Gallery</h5>
+				<img *ngFor="let gallery of gallery_data" src="{{logo_url}}/{{item.org_id}}/{{gallery.name}}" class="img" imageViewer>
+			</ion-slide>
+		</ion-slides>
+	</div>
+</ion-content>

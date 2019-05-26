@@ -1,0 +1,135 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>For Government</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openModal()">
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="counselling">
+	<div class="counselling_content">
+		<div class="main">
+			<div class="cards">
+				<div><img src="{{image}}school.png" (click)="school()"></div>
+				<div>Schools</div>
+			</div>
+			<div class="cards">
+				<div><img src="{{image}}coaching_institute.png" (click)="coaching()"></div>
+				<div>Coaching</div>
+			</div>
+			<div class="cards">
+				<div><img src="{{image}}College.png" (click)="college()"></div>
+				<div>Colleges</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="cards">
+				<div><img src="{{image}}study-abroad.png" (click)="studyabroad()"></div>
+				<div>Study Abroad</div>
+			</div>
+			<div class="cards">
+				<div><img src="{{image}}compitative-exam.png" (click)="exams()"></div>
+				<div>Explore Exams</div>
+			</div>
+			<div class="cards">
+				<div><img src="{{image}}career-counselling.jpg" (click)="counselling()"></div>
+				<div>Career Counseling</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="cards">
+			</div>
+			<div class="cards">
+				<div><img src="{{image}}education-loan.png" (click)="loan()"></div>
+				<div>Education Loan</div>
+			</div>
+			<div class="cards">
+			</div>
+		</div>
+	</div>
+
+	<div class="coun_content" text-center>
+		<div class="content_first">
+			<h5 class="title">Take a step in a smart vision</h5>
+			<p class="light_text">SmartStudents is taking a stand with the vision of the government by offering for integrating our ERP systems for various projects of state and central government.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}govenment_ft.jpg">
+		</div>
+		<div class="content_second">
+			<h5 class="title">Connect yourself with our advance ERP systems.</h5>
+			<p class="light_text">We strongly believe that government is taking steps to enhance the education system in India so come and connect with us in our path for bringing smartness into the world.</p>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}govenment_ft1.jpg">
+		</div>
+	</div>
+
+	<div class="coun_form_head">
+		<div class="form_head" text-center>
+			<h3>We are happy to help you with our expert Counsellor</h3>
+		</div>
+	</div>
+	<div class="coun_form">
+		<ion-list>
+			<ion-item>
+				<ion-input type="text" [(ngModel)]="Data.name" placeholder="Name"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-input type="text" [(ngModel)]="Data.email" placeholder="Email"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-input type="text" [(ngModel)]="Data.contact" maxlength="10" placeholder="Contact"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-textarea placeholder="Type any Query*" lineHeight="22" [(ngModel)]="Data.msg"></ion-textarea>
+			</ion-item>
+			<button ion-button block color="primary" (click)="contact_form()">Submit</button>
+		</ion-list>
+	</div>
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="links">
+			<div class="link" text-center>
+				<a href="https://www.facebook.com/Smart-Students-153047311975490/">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://twitter.com/Smart__Students">
+					<ion-icon name="logo-twitter"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://www.linkedin.com/company/smart-students">
+					<ion-icon name="logo-linkedin"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-youtube"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-google"></ion-icon>
+				</a>
+			</div>
+		</div>
+		<br><br>
+		<div class="details" text-center>
+			<div class="copy">
+				Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+			</div>
+			<br>
+			<div class="policy">
+				<a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+			</div>
+			<p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+		</div>
+	</div>
+</ion-content>

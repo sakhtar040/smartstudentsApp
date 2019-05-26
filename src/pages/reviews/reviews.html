@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>
+			All Reviews
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="reviews">
+	<ion-card *ngFor="let review of all_reviews">
+		<ion-card-header>
+			<ion-item>
+				<ion-avatar item-start>
+					<img src="{{logo_url}}/{{review.org_id}}/{{review.org_photo}}" class="img-logo">
+				</ion-avatar>
+				<h3>{{review.org_name}}</h3>
+			</ion-item>
+		</ion-card-header>
+		<ion-card-content>
+			<div class="review_content" text-justify>
+				{{review.msg}}
+			</div>
+			<ion-buttons end>
+				<button ion-button clear icon-only style="color: red;" (click)="delReview(review.rid)">
+					<ion-icon name="trash"></ion-icon>
+				</button>
+			</ion-buttons>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

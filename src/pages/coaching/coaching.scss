@@ -1,0 +1,62 @@
+.coaching{
+	.top{
+		height: 150px;
+		padding: 10px;
+
+		.head{
+			color: #fff;
+			font-family: Raleway;
+
+			.head_color{
+				color: #ffff53;
+			}
+		}
+	}
+
+	.explore{
+		background-color: #F6F8FA;
+		margin: 10px 0px 10px 0px;
+		padding: 10px 0px 10px 0px;
+
+		.explore_head{
+			font-family: Raleway;
+			font-size: 18px;
+			color: #0088ff;
+		}
+		.card_10{
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+		}
+	}
+
+	.footer{
+		width: 100%;
+		height: 150px;
+		background-color: #999;
+
+		.links{
+			padding-top: 35px;
+			margin-left: 15%;
+			width: 70%;
+
+			.link{
+				float: left;
+				width: 20%;
+			}
+		}
+
+		.details{
+			.policy{
+				a{
+					text-decoration: none;
+					color: black;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

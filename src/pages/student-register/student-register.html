@@ -1,0 +1,59 @@
+<ion-content padding class="registration_con">
+	<div class="register_form" text-center>
+		<h4 class="title">Register with Us</h4>
+		<div class="form">
+			<ion-list>
+				<ion-item>
+					<ion-input type="text" [(ngModel)]="userData.name" placeholder="Name"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="text" [(ngModel)]="userData.email" placeholder="Email"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="text" [(ngModel)]="userData.contact" maxlength="10" placeholder="Contact"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" [(ngModel)]="userData.password" placeholder="Password"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="Confirm Password" [(ngModel)]="userData.password2"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-datetime displayFormat="DD/MMMM/YYYY" pickerFormat="MMMM DD YYYY" placeholder="Date of Birth" [(ngModel)]="userData.dob"></ion-datetime>
+				</ion-item>
+				<ion-item>
+					<label class="control-label col-md-1" style="float: left;">Gender:</label>
+					<div style="padding-left: 50px;">
+						<label class="radio-inline control-label">
+							&nbsp;&nbsp;
+							<input type="radio" name="gender" value="0" [(ngModel)]="userData.gender">
+							&nbsp;Male
+						</label>
+						<label class="radio-inline control-label">
+							&nbsp;&nbsp;
+							<input type="radio" name="gender" value="1" [(ngModel)]="userData.gender">
+							&nbsp;Female
+						</label>
+					</div>
+				</ion-item>
+				<ion-item>
+					<ion-label>Select State</ion-label>
+					<ion-select [(ngModel)]="userData.state">
+						<ion-option *ngFor="let state of state_data" value="{{state.id}}">
+							{{state.name}}
+						</ion-option>
+					</ion-select>
+				</ion-item>
+				<!--<ion-item>
+					<ion-label>Select City</ion-label>
+					<ion-select [(ngModel)]="userData.city">
+						<ion-option *ngFor="let city of city_data" value="{{city.id}}">{{city.name}}</ion-option>
+					</ion-select>
+				</ion-item>-->
+				<button ion-button color="primary" block (click)="stu_register()">Create Account</button>
+				By Creating an account with you you agree to follow all our <a (click)="terms()">terms and conditions</a>.<br>
+				Already A Member? <a (click)="login()">Login</a> here it's Easy .
+			</ion-list>
+		</div>
+	</div>
+</ion-content>

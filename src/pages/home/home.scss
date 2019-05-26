@@ -1,0 +1,254 @@
+.home{
+	.top{
+		height: 150px;
+		padding: 10px;
+
+		.head{
+			color: #fff;
+			font-family: calibri;
+
+			.head_color{
+				color: #ffff53;
+				font-size: 25px;
+			}
+		}
+	}
+
+	.top_content{
+		.para{
+			padding: 0px 10px 0px 10px;
+			color: #99a8a3;
+			.first{
+				color: #0088ff;
+			}
+		}
+	}
+
+	.home_content{
+		.main{
+			width: 100%;
+
+			.cards{
+				height: auto;
+				width: 33%;
+				float: left;
+				padding: 10px 25px 10px 25px;
+				color: #0088ff;
+				text-align: center;
+				font-size: 10px;
+			}
+			.cards img{
+				height: 50px;
+			}
+		}
+	}
+
+	.top_5{
+		background-color: #F6F8FA;
+		margin-top: 290px;
+		padding: 2px 0px 2px 0px;
+
+		.title{
+			color:#0088ff;
+		}
+
+		.tabs{
+			padding: 0px 10px 0px 10px;
+
+			.tabs_tab{
+				width: 33%;
+				height: 22px;
+				background: #fff;
+				text-align: center;
+				color: #717a81;
+				font-weight: bold;
+				font-size: 14px;
+				padding-top: 2px;
+				float: left;
+				border-right: 1px solid silver;
+			}
+			.tabs_tab:hover, .tabs_tab.active{
+				color: #fff;
+				background: #1F90D6;
+			}
+		}
+		.day{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+		.daycum{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+		.board{
+			margin-top: 25px; 
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+	}
+
+	.top_10{
+		background-color: #F6F8FA;
+		margin-top: 20px;
+		padding: 5px 0px 5px 0px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.card_10{
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+				height: 60px;
+			}
+
+			ion-card{
+				.img-top{
+					height: 150px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.career{
+		background-color: #F6F8FA;
+		padding: 5px 0px 5px 0px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.tabs{
+			padding: 0px 10px 0px 10px;
+
+			.tabs_tab{
+				width: 100%;
+				height: 25px;
+				background: #fff;
+				text-align: center;
+				color: #717a81;
+				font-weight: bold;
+				font-size: 14px;
+				padding-top: 2px;
+				float: left;
+			}
+			.tabs_tab:hover, .tabs_tab.active{
+				color: #fff;
+				background: #1F90D6;
+			}
+		}
+
+		.content{
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			.explore_head1{
+				font-size: 15px;
+				color: #1F90D6;
+			}
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+	}
+
+	.explore{
+		background-color: #F6F8FA;
+		padding: 5px 0px 5px 0px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.explore_card{
+			ion-card{
+				height: 100px;
+			}
+			.btn{
+				margin: 25px auto;
+				border: 0px;border-radius: 5px;
+				background-color: #F6F8FA;
+				width: 100px;
+				padding: 5px 0px 5px 0px;
+				color: #F29D37;
+			}
+		}
+	}
+
+	.bottom{
+		padding-right: 10px;
+	}
+
+	.footer{
+		width: 100%;
+		height: 150px;
+		background-color: #999;
+
+		.links{
+			padding-top: 35px;
+			margin-left: 15%;
+			width: 70%;
+
+			.link{
+				float: left;
+				width: 20%;
+			}
+		}
+
+		.details{
+			.policy{
+				a{
+					text-decoration: none;
+					color: black;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+.link a{text-decoration: none; color: black;}
+.li a{text-decoration: none; color: black;}

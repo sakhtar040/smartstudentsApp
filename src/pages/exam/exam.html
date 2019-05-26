@@ -1,0 +1,102 @@
+<!--Header-->
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>
+			Exam
+		</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="openModal()">
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="exam">
+	<!--Top Section-->
+	<div style="background:url('http://smartstudents.co.in/avator/banner.jpg');background-size:cover;" class="top" text-center>
+		<h3 class="head">
+			<span class="head_color">CAT</span> Exam Preparation Simplified!
+		</h3>
+		Practice, Analyze & Improve
+		<button ion-button (click)="getStarted()" >Get Started for free!</button>
+	</div>
+
+	<div class="exam_main" text-center>
+		<h5 class="title">
+			Online Test Series & Free Mock Tests For Competitive Exams in India
+		</h5>
+		<p class="para">
+			<span class="first">Best Exam Preparation for You. Start Now!</span><br>
+			Boost your exam preparation with SmartStudents to crack the most popular competitive exams in India. <br>
+			Select your course and get started.
+		</p>
+	</div>
+	<div class="exam_content" text-center>
+		<div class="content_first">
+			<h5 class="title">DETAILED & PERSONALIZED PERFORMANCE ANALYSIS</h5>
+			<p class="light_text">Studying and taking tests go hand-in-hand with performance analysis. We give you the most in-depth analysis for every test you take so that you can track your growth in each topic test-by-test.</p>
+			<button ion-button color="primary" (click)="getStarted()">Get Started for free!</button>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}testbook-test-comprehension-2.jpg">
+		</div>
+		<div class="content_second">
+			<h5 class="title">THE FASTEST ONLINE LEARNING EXPERIENCE</h5>
+			<p class="light_text">We know about how precious your time is. Get the advantage of the latest technology to kickstart your exam preparation and get the finest learning experience - on Website and App. Check them all out!</p>
+			<button ion-button color="primary" (click)="getStarted()">Get Started for free!</button>
+		</div>
+		<div class="imgs">
+			<img src="{{image}}testbook-test-comprehension-2.jpg">
+		</div>
+	</div>
+	<div style="background:url('http://smartstudents.co.in/avator/books_life.jpg');background-size:cover;" class="bottom" text-center>
+		<h3 class="bot">
+			<span class="bot_color">Start your Exam Preparation Now!</span>
+		</h3>
+		Practice, Analyze & Improve
+		<button ion-button color="light" (click)="getStarted()">Get Started for free!</button>
+	</div>
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="links">
+			<div class="link" text-center>
+				<a href="https://www.facebook.com/Smart-Students-153047311975490/">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://twitter.com/Smart__Students">
+					<ion-icon name="logo-twitter"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://www.linkedin.com/company/smart-students">
+					<ion-icon name="logo-linkedin"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-youtube"></ion-icon>
+				</a>
+			</div>
+			<div class="link" text-center>
+				<a href="https://plus.google.com/u/0/115468258445665218104">
+					<ion-icon name="logo-google"></ion-icon>
+				</a>
+			</div>
+		</div>
+		<br><br>
+		<div class="details" text-center>
+			<div class="copy">
+				Copyright &copy; <a href="http://smartstudents.co.in">SmartStudents</a>
+			</div>
+			<br>
+			<div class="policy">
+				<a (click)="privacy()">Policy Policy</a> | <a (click)="terms()">Terms & Condition</a> | <a (click)="contact()">Contact Us</a>
+			</div>
+			<p style="font-size: 12px;">Created By <a href="http://genextek.com">Genextek</a></p>
+		</div>
+	</div>
+</ion-content>

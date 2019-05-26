@@ -1,0 +1,141 @@
+.college{
+	.top{
+		height: 150px;
+		padding: 10px;
+
+		.head{
+			color: #fff;
+			font-family: Raleway;
+
+			.head_color{
+				color: #ffff53;
+			}
+		}
+	}
+
+	.top_10{
+		background-color: #F6F8FA;
+		margin-top: 20px;
+		padding: 5px 0px 5px 0px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.card_10{
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+				height: 60px;
+			}
+
+			ion-card{
+				.img-top{
+					height: 150px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+
+	.explore{
+		background-color: #F6F8FA;
+		margin: 10px 0px 10px 0px;
+		padding: 10px 0px 10px 0px;
+
+		.explore_head{
+			font-family: Raleway;
+			font-size: 18px;
+			color: #0088ff;
+		}
+		.card_10{
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+		}
+	}
+
+	.career{
+		background-color: #F6F8FA;
+		padding: 5px 0px 5px 0px;
+		margin-bottom: 10px;
+
+		.title{
+			color: #0088ff;
+		}
+
+		.tabs{
+			padding: 0px 10px 0px 10px;
+			margin-bottom: 450px; 
+
+			.tabs_tab{
+				width: 100%;
+				height: 25px;
+				background: #fff;
+				text-align: center;
+				color: #717a81;
+				font-weight: bold;
+				font-size: 14px;
+				padding-top: 2px;
+				float: left;
+			}
+			.tabs_tab:hover, .tabs_tab.active{
+				color: #fff;
+				background: #1F90D6;
+			}
+		}
+
+		.content{
+			padding: 5px 0px 5px 0px;
+			color: #fff;
+
+			.explore_head1{
+				font-size: 15px;
+				color: #1F90D6;
+			}
+
+			ion-card{
+				padding: 0px;
+			}
+			ion-card-content{
+				padding: 0px;
+			}
+			ion-card-header{
+				padding: 2px;
+			}
+		}
+	}
+
+	.footer{
+		width: 100%;
+		height: 150px;
+		background-color: #999;
+
+		.links{
+			padding-top: 35px;
+			margin-left: 15%;
+			width: 70%;
+
+			.link{
+				float: left;
+				width: 20%;
+			}
+		}
+
+		.details{
+			.policy{
+				a{
+					text-decoration: none;
+					color: black;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

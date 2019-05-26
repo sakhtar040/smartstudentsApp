@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Mock</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="mock">
+	<div class="mock_start">
+		<ion-card>
+			<ion-card-content>
+				<ion-card-header text-center>
+					{{p.pname}}
+				</ion-card-header>
+				<div>
+					<span style="float: left;">Duration: {{p.duration}} mins</span>
+					<span style="float: right;">Maximum Marks: 100</span>
+				</div>
+				<div class="instruction">
+					<ul>
+						<li>The test contains 5 sections with each having 20 questions.</li>
+						<li>Each questions has 4 options out of which only one is correct</li>
+					</ul>
+				</div>
+				<div class="btn" text-center (click)="start_exam(e,l,p)">
+					Agree & Continue
+				</div>
+			</ion-card-content>
+		</ion-card>
+	</div>
+</ion-content>
